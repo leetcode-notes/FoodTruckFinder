@@ -60,7 +60,7 @@ def get_food_trucks(page_number):
     current_time_string = get_current_time_string()
     client = Socrata(SOCRATA_DOMAIN, SOCRATA_TOKEN)
     food_trucks = client.get(FOOD_TRUCKS_RESOURCE_IDENTIFIER,
-                             select="applicant, location, start24, end24",
+                             select="applicant, location",
                              where=get_query_string(weekday_index, current_time_string),
                              limit=LIMIT,
                              offset=page_number * LIMIT,
@@ -79,9 +79,7 @@ def print_food_trucks(food_trucks):
     for food_truck in food_trucks:
         name = food_truck['applicant']
         location = food_truck['location']
-        start24 = food_truck['start24']
-        end24 = food_truck['end24']
-        print('{0:<60} {1:<30} {2:<30} {3:<30}'.format(name, location, start24, end24))
+        print('{0:<60} {1:<30}'.format(name, location))
 
 
 def main():
