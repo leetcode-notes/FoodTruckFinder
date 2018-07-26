@@ -1,2 +1,1 @@
-requests
-sodapy
+sodapy==1.4.6
