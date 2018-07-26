@@ -5,7 +5,7 @@ Command line tool to find food trucks in SF at the current time and day
 This project should be run with Python 3. You can get Python3 using [homebrew](https://brew.sh/): 
 `brew install python`
 
-Run the following command to install dependencies to your Python interpreter:
+Use [pip](https://pypi.org/project/pip/) to install dependencies to your Python interpreter:
 `pip install -r requirements.txt`
 
 ## How to Run
