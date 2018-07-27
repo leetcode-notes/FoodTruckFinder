@@ -83,9 +83,9 @@ def print_food_trucks(food_trucks):
 
 
 def main():
-    offset = 0
+    page_number = 0
     while True:
-        food_trucks = get_food_trucks(offset)
+        food_trucks = get_food_trucks(page_number)
         if food_trucks:
             print_food_trucks(food_trucks)
         else:
@@ -98,7 +98,7 @@ def main():
         sys.stdout.write("Show more results [Y/N]: ")
         choice = input().lower()
         if choice == 'y':
-            offset += 1
+            page_number += 1
         else:
             return
 
